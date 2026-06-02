@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anezka Portfolio</title>
+
+<style>
+
+:root{
+    --primary:#E8AEB7;
+    --primary-dark:#D48C97;
+
+    /* GANTI BACKGROUND DI SINI */
+    --bg-image:url("background.jpg");
+
+    --card:rgba(255,255,255,0.85);
+    --text:#6E4F57;
+    --text-muted:#9A7F86;
+    --border:#F2DCE1;
+
+    --radius:18px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background-image:var(--bg-image);
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:var(--text);
+}
+
+/* NAVBAR */
+
+nav{
+    background:rgba(255,255,255,0.8);
+    backdrop-filter:blur(10px);
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:var(--primary-dark);
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.profile{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.hero h1{
+    margin-top:15px;
+    color:var(--primary-dark);
+}
+
+.hero p{
+    color:var(--text-muted);
+}
+
+/* SECTION */
+
+section{
+    max-width:900px;
+    margin:30px auto;
+    padding:0 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:15px;
+    color:var(--primary-dark);
+}
+
+.card{
+    background:var(--card);
+    backdrop-filter:blur(8px);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:25px;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#FFE8EE;
+    padding:8px 15px;
+    border-radius:30px;
+}
+
+/* ACHIEVEMENTS */
+
+.achievement-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.achievement-img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:10px;
+}
+
+/* BUTTON */
+
+.btn{
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+.btn:hover{
+    background:var(--primary-dark);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:var(--text-muted);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<img src="fotoku.jpg" alt="My Photo" class="profile">
+
+<h1>🌸 Anezka 🌸</h1>
+
+<p>X-4 Student</p>
+
+<button class="btn" onclick="showMessage()">
+💌 Welcome
+</button>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+Hello! My name is Anezka and I am a student from class X-4.
+I enjoy learning new things and exploring technology.
+I love designing websites because it allows me to be creative while solving problems.
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="card">
+
+<div class="skills">
+
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Canva</span>
+<span class="skill">Public Speaking</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements">
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="achievement-grid">
+
+<div class="card">
+
+<img src="prestasi1.jpg" class="achievement-img">
+
+<h3>🏆 Achievement 1</h3>
+
+<p>
+Write your achievement here.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="prestasi2.jpg" class="achievement-img">
+
+<h3>🥇 Achievement 2</h3>
+
+<p>
+Write your achievement here.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+
+<p>💻 GitHub: https://github.com/yourusername</p>
+
+<p>📧 Email: your@email.com</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Made with 💗 by Anezka</p>
+
+</footer>
+
+<script>
+
+function showMessage(){
+    alert("Thank you for visiting my portfolio! 🌸");
+}
+
+</script>
+
+</body>
+</html>
